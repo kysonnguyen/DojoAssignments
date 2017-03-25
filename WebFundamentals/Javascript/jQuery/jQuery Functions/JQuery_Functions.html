@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions Assignment</title>
+    <link rel="stylesheet" href="JQuery_Functions.css">
+    <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#click").click(function(){
+          alert( "You clicked a button!");
+        });
+        $("#hide").click(function(){
+          $("#magician").hide();
+        });
+        $("#show").click(function(){
+          $("#magician").show();
+        });
+        $("#toggle").click(function(){
+          $("#magician").toggle("slow");
+        });
+        $("#slideDown").click(function(){
+          $("#magician").slideDown("slow");
+        });
+        $("#slideUp").click(function(){
+          $("#magician").slideUp();
+        });
+        $("#slideToggle").click(function(){
+          $("#magician").slideToggle();
+        });
+        $("#fadeIn").click(function(){
+          $("#magician").fadeIn();
+        });
+        $("#fadeOut").click(function(){
+          $("#magician").fadeOut();
+        });
+        $("#addClass").click(function(){
+          $("h2").addClass("functions");
+        });
+        $("#before").click(function(){
+          $("#before").before("<p>AWESOME</p>");
+        });
+        $("#after").click(function(){
+          $("#after").after("<p>INCREDIBLE</p>");
+        });
+        $("#append").click(function(){
+          $("p").append("<p>:]</p>");
+        });
+        $("#html").click(function(){
+          $("h1").html("<i>VOILA!!!!!<i>");
+        });
+        $("#attr").click(function(){
+          $("#magician").attr("alt", "I'm a magician");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Learn <span><img src="jquery-icon.png" alt="icon"></span> Functions</h1>
+        <img src="magician.png" alt="magician" id="magician">
+      </header>
+      <ul>
+        <li>
+          <button type="button" name="button" id="click">Click me</button>
+          <div class="desc">
+            <h2>.click</h2>
+            <p>click to see an alert</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="hide">Click me</button>
+          <div class="desc">
+            <h2>.hide</h2>
+            <p>click to hide <span class="11">awesome</span> the magician</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="show">Click me</button>
+          <div class="desc">
+            <h2>.show</h2>
+            <p>click to show the magician again</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="toggle">Click me</button>
+          <div class="desc">
+            <h2>.toggle</h2>
+            <p>click to toggle the magician (slow)</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="slideUp">Click me</button>
+          <div class="desc">
+            <h2>.slideUp</h2>
+            <p>the magician disappear downward</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="slideDown">Click me</button>
+          <div class="desc">
+            <h2>.slideDown</h2>
+            <p>the magician appear upward</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="slideToggle">Click me</button>
+          <div class="desc">
+            <h2>.slideToggle</h2>
+            <p>hide/show the magician again</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="fadeOut">Click me</button>
+          <div class="desc">
+            <h2>.fadeOut</h2>
+            <p>the magician fades away like illusion</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="fadeIn">Click me</button>
+          <div class="desc">
+            <h2>.fadeIn</h2>
+            <p>the magician will appear before you</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="addClass">Click me</button>
+          <div class="desc">
+            <h2>.addClass</h2>
+            <p>add class to the functions --> white</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="before">Click me</button>
+          <div class="desc">
+            <h2>.before</h2>
+            <p>adds "AWESOME" before the button</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="after">Click me</button>
+          <div class="desc">
+            <h2>.after</h2>
+            <p>adds "Incredible" after the button"</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="append">Click me</button>
+          <div class="desc">
+            <h2>.append</h2>
+            <p>add ":]" after the explanations</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="html">Click me</button>
+          <div class="desc">
+            <h2>.html</h2>
+            <p>change our header's h1</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="attr">Click me</button>
+          <div class="desc">
+            <h2>.attr</h2>
+            <p>set magician's alt to "I'm a magician"</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="val">Click me</button>
+          <div class="desc">
+            <h2>.val</h2>
+            <p></p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="text">Click me</button>
+          <div class="desc">
+            <h2>.text</h2>
+            <p></p>
+          </div>
+        </li>
+        <li>
+          <button type="button" name="button" id="data">Click me</button>
+          <div class="desc">
+            <h2>.data</h2>
+            <p></p>
+          </div>
+        </li>
+      </ul>
+  </div>
+  </body>
+</html>

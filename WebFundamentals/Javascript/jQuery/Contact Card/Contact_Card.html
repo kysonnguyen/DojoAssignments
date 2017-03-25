@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="Contact_Card.css">
+    <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('form').submit(function(){
+          var first = $('#f1').val();
+          var last = $('#f2').val();
+          var desc = $('textarea').val();
+          var inst = "Click for description!";
+          $('#cards').append("<div id='card'><p id='front'>"+first+" "+last+"</p><p id='inst'>"+inst+"</p><p id='flip'>"+desc+"</p></div");
+          return false;
+        });
+        $(document).on('click', '#card', function(){
+          $(this).children().toggle();
+        })
+        //Clear form fields by setting their value to empty
+				$("#first").val("");
+				$("#last").val("");
+				$("#desc").val("")
+      })
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Contact <span>Card</span></h1>
+      <form class="" action="index.html" method="post">
+        <label for="">First Name:</label><input type="text" name="First Name" value="" id="f1">
+        <br>
+        <label for="">Last Name:</label><input type="text" name="Last name" value="" id="f2">
+        <br>
+        <label for="">Description:</label></br><textarea name="Description" id="f3"></textarea>
+        <input type="submit" name="" value="Add User">
+      </form>
+      <div id="cards">
+
+      </div>
+    </div>
+  </body>
+</html>

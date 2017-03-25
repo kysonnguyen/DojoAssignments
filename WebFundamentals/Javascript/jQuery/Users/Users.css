@@ -1,0 +1,35 @@
+*{
+  margin: 0
+  padding: 0
+}
+
+table{
+  width: 500px;
+  border: 3px black solid;
+  margin: 20px;
+}
+
+h1{
+  border-bottom: 5px gray solid;
+}
+
+form{
+  width: 400px;
+  margin-left: 20px;
+}
+form label, input{
+  display: inline-block;
+}
+form label{
+  width: 30%;
+  text-align: right;
+  margin-right: 5px;
+}
+form input{
+  width:200px;
+}
+form>input:last-child{
+  width: 70px;
+  padding: 5px;
+  margin: 10px 0px 10px 255px;
+}

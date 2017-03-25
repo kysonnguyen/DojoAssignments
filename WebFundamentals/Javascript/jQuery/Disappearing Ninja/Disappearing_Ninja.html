@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja Assignment</title>
+    <link rel="stylesheet" href="Disappearing_Ninja.css">
+    <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      var ninja= "";
+      for (var i = 0; i < 8; i++) {
+        ninja += '<img src="ninja.jpg" alt="ninja">'
+      };
+      $(document).ready(function(){
+        $("main").append(ninja)
+        $("img").click(function(){
+          $(this).hide("slow");
+        });
+        $("button").click(function(){
+          $("img").fadeIn();
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Disappearing Ninja</h1>
+      <main>
+      </main>
+      <button type="button" name="button">Restore</button>
+  </div>
+  </body>
+</html>

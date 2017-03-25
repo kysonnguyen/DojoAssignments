@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+}
+
+#wrapper{
+  width: 970px;
+  height: auto;
+  background-image: linear-gradient(-60deg, white 5%, black 80%, gray 15%);
+}
+
+h1{
+  border-bottom: 5px gray solid;
+  margin: 0px 20px 15px;
+  padding-top: 20px;
+  padding-bottom:5px;
+}
+  h1 span{
+    background: repeating-linear-gradient( -60deg, white 25%, gold 90%, white 5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline-style: outset;
+    outline-color: white;
+  }
+form{
+  width: 400px;
+  margin-left: 30px;
+  position: relative;
+  display: inline-block;
+
+}
+
+form label, input{
+  display: inline-block;
+}
+form label{
+  width:18%;
+  font: 13px Helvetica;
+  color: white;
+  text-align: justify;
+  margin-right: 3px;
+  line-height: 200%;
+}
+form input{
+  width:200px;
+}
+form textarea{
+  width: 278px;
+  height: 100px;
+  display: block;
+}
+form>input:last-child{
+  width: 70px;
+  padding: 5px;
+  margin: 20px 0px 10px 0px;
+}
+
+#cards{
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 100px;
+}
+
+#card{
+  background: linear-gradient( -60deg, gold, white 40%);
+  text-align: center;
+  border: 5px solid white;
+  margin-bottom: 10px;
+  width:300px;
+  height: 150px;
+}
+
+#flip{
+  display: none;
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#front{
+  font: 50px AR BLANCA;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+#inst{
+
+}

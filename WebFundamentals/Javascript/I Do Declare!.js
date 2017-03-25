@@ -1,0 +1,20 @@
+var num1= 0.5;
+var num2= 1000;
+var num3= -Infinity;
+var num4= 2.6789342334246563453542524;
+var str1= "hello";
+var str2= "w0rld";
+var str3= "!@#$%^&*";
+var iamhappy= true;
+var iamsad = false;
+var undef;
+
+console.log("first number:", num1);
+console.log('second number:', num2);
+console.log('3rd number:', num3);
+console.log('4th num:', num4);
+console.log('1st string:', str1);
+console.log('2nd string:', str2);
+console.log('The third string:', str3);
+console.log('Am I tired?', iamhappy);
+console.log("It's early right now:", iamsad);

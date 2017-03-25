@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Numbers Only</title>
+    <script>
+      "use strict";
+      function num(input){
+        var newArray= [];
+        for ( var i=0; i<input.length; i++){
+          if(typeof input[i] === "number"){
+            newArray.push(input[i]);
+          }
+        }
+        return newArray;
+      }
+    </script>
+  </head>
+</html>

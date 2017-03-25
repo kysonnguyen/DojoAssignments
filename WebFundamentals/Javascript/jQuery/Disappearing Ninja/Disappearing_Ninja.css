@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#wrapper{
+  width: 970px;
+  background-color: gray;
+}
+main{
+  background-color: white;
+}
+h1{
+  background-color: gray;
+  color: white;
+  padding: 20px;
+}
+img{
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  padding: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 3px solid gray;
+}
+button{
+  font-size: 30px;
+  margin: 10px;
+  border: 2px black solid;
+  border-radius: 5px;
+}

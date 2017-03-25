@@ -1,0 +1,24 @@
+C:\Users\kyson\Desktop\DojoAssignments>dir /b /s
+C:\Users\kyson\Desktop\DojoAssignments\iOS
+C:\Users\kyson\Desktop\DojoAssignments\MEAN
+C:\Users\kyson\Desktop\DojoAssignments\netCore
+C:\Users\kyson\Desktop\DojoAssignments\Python
+C:\Users\kyson\Desktop\DojoAssignments\Ruby
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals
+C:\Users\kyson\Desktop\DojoAssignments\iOS\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\MEAN\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\netCore\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\Python\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\Ruby\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\CSS
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\Git
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\HTML
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\Javascript
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\CSS\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\Git\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\HTML\about.txt
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\HTML\indentation.html
+C:\Users\kyson\Desktop\DojoAssignments\WebFundamentals\Javascript\about.txt
+
+C:\Users\kyson\Desktop\DojoAssignments>

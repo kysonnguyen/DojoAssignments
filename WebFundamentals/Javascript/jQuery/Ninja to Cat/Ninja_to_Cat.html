@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja to Cat</title>
+    <link rel="stylesheet" href="Ninja_to_Cat.css">
+    <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        var sourceSwap = function () {
+          var $this = $(this);
+          var newSource = $this.data('alt-src');
+          $this.data('alt-src', $this.attr('src'));
+          $this.attr('src', newSource);
+        }
+      $(document).ready(function(){
+          $("img").click(sourceSwap, sourceSwap);
+      })
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <img src="img/ninja0.png" data-alt-src="img/cat0.png" />
+      <img src="img/ninja1.png" data-alt-src="img/cat1.png" />
+      <img src="img/ninja2.png" data-alt-src="img/cat2.png" />
+      <img src="img/ninja3.png" data-alt-src="img/cat3.png" />
+      <img src="img/ninja4.png" data-alt-src="img/cat4.png" />
+    </div>
+  </body>
+</html>
