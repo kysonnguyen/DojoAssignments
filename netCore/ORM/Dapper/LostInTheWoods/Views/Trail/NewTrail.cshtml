@@ -1,0 +1,29 @@
+@using LostInTheWoods.Models
+@model LostInTheWoods.Models.Trail
+
+<header>
+    <h2>Add a New Trail</h2>
+    <a href="/">Go Home</a>
+</header>
+
+<form asp-action="AddTrail", asp-controller="Trail", method="POST">
+    <label class="labels" asp-for="name">Trail Name:</label>
+    <input class="inputs" asp-for="name" type="text"><br>
+    <label class="labels" asp-for="description">Description:</label>
+    <textarea class="inputs" asp-for="description" name="description" id="" cols="30" rows="10"></textarea><br>
+    <label class="labels" asp-for="length">Trail Length (in miles):</label>
+    <input class="inputs" asp-for="length" type="text"><br>
+    <label class="labels" asp-for="elevation_change">Elevation Change (in feet):</label>
+    <input class="inputs" asp-for="elevation_change" type="number"><br>
+    <label class="labels" >Longitude & Latitude:</label>
+    <input class="inputs" asp-for="longitude" type="text">
+    <input class="inputs" asp-for="latitude" type="text"><br>
+    <input type="submit" value="Create Record">
+</form>
+@{
+    if(@ViewBag.Errors != null){
+        foreach(var error in @ViewBag.Errors){
+            <p>error</p>
+        }
+    }
+}

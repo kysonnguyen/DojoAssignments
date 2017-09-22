@@ -1,0 +1,17 @@
+@using LostInTheWoods.Models
+@model LostInTheWoods.Models.Trail
+
+<header>
+    <h2>@ViewBag.Trail.name</h2>
+    <a href="/">Go Home</a>
+</header>
+<main>
+    <h5>Description</h5>
+    <p>@ViewBag.Trail.description</p>
+    <h5>Trail Length</h5>
+    <p>@ViewBag.Trail.length</p>
+    <h5>Elevation Change</h5>
+    <p>@ViewBag.Trail.elevation_change</p>
+    <p>Longitude - @ViewBag.Trail.longitude</p>
+    <p>Latitude - @ViewBag.Trail.latitude</p>
+</main>

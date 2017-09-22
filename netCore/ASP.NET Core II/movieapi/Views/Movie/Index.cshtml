@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<header>
+    <h1>Movie Lookup:</h1>
+    <form action="/search/{movie}" method="post">
+        Search for a movie: <input id="search" type="search"name="movie">
+    </form>
+</header>
+<p style="color: red">@ViewBag.Error</p>
+<main>  
+    <table style="width:100%">
+        
+    </table>
+</main> 

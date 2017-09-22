@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Index.css">
+</head>
+<body>
+    <div id = "wrapper">
+        <header>
+            <h4>Fullness: @ViewBag.myDachi.Fullness</h4>
+            <h4>Happiness: @ViewBag.myDachi.Happiness</h4>
+            <h4>Meals: @ViewBag.myDachi.Meals</h4>
+            <h4>Energy: @ViewBag.myDachi.Energy</h4>        
+        </header>
+        <Main>
+            <img src="" alt="Dachi is here">
+            <p>@ViewBag.Message</p>
+        </Main>
+        <section>
+            @{
+                if (ViewBag.GameStatus == "ongoing")
+                {
+                    <div>
+                        <form action="/process" method = "Post">
+                            <input type = "hidden" value = "Feed" name = "action">
+                            <button type = "submit">Feed</button>
+                        </form>
+                        <form action="/process" method = "Post">
+                            <input type = "hidden" value = "Play" name = "action">
+                            <button type = "submit">Play</button>
+                        </form>
+                        <form action="/process" method = "Post">
+                            <input type = "hidden" value = "Work" name = "action">
+                            <button type = "submit">Work</button>
+                        </form>
+                        <form action="/process" method = "Post">
+                            <input type = "hidden" value = "Sleep" name = "action">
+                            <button type = "submit">Sleep</button>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <form action="/reset" method = "Post">
+                        <input type = "submit" value ="Restart?">
+                    </form>
+                }
+            }
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+C:\Users\kyson\Desktop\DojoAssignments\netCore\boxing_unboxing\bin\Debug\netcoreapp1.1\boxing_unboxing.deps.json
+C:\Users\kyson\Desktop\DojoAssignments\netCore\boxing_unboxing\bin\Debug\netcoreapp1.1\boxing_unboxing.runtimeconfig.json
+C:\Users\kyson\Desktop\DojoAssignments\netCore\boxing_unboxing\bin\Debug\netcoreapp1.1\boxing_unboxing.runtimeconfig.dev.json
+C:\Users\kyson\Desktop\DojoAssignments\netCore\boxing_unboxing\bin\Debug\netcoreapp1.1\boxing_unboxing.dll
+C:\Users\kyson\Desktop\DojoAssignments\netCore\boxing_unboxing\bin\Debug\netcoreapp1.1\boxing_unboxing.pdb
+C:\Users\kyson\Desktop\DojoAssignments\netCore\boxing_unboxing\obj\Debug\netcoreapp1.1\boxing_unboxing.AssemblyInfo.cs
+C:\Users\kyson\Desktop\DojoAssignments\netCore\boxing_unboxing\obj\Debug\netcoreapp1.1\boxing_unboxing.dll
+C:\Users\kyson\Desktop\DojoAssignments\netCore\boxing_unboxing\obj\Debug\netcoreapp1.1\boxing_unboxing.pdb

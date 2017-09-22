@@ -1,0 +1,27 @@
+@using System.Collections.Generic
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Show Pokedex</h1>
+<form action="/GetPokemon" method="post">
+    <p>Insert Pokemon ID to lookup <input type="number" name ="id"></p>
+    <input type="submit" value="Lookup pokemon" name="" id="">
+</form>
+
+@{
+    if(@ViewBag.PokeInfo != null)
+    {   
+        <h3>Pokemon Name: @ViewBag.PokeInfo["name"]</h3> 
+        <h5>Height: @ViewBag.PokeInfo["height"]</h5>
+        <h5>Weight: @ViewBag.PokeInfo["weight"]</h5>
+        <ul><h5>Types:</h5>
+            @{
+                foreach(string type in (@ViewBag.PokeInfo["types"] as List<string>))
+                    {
+                        <li>@type</li>
+                    }
+            }
+        </ul> 
+    }
+}

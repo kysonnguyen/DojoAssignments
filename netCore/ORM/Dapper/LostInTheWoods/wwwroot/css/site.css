@@ -1,0 +1,36 @@
+/*Write all of your CSS here*/
+header {
+    width: 100%;
+}
+header *{
+    display: inline-block;
+    padding-right: 5%;
+}
+
+header a{
+    margin-left: 40%;
+    text-align: right;
+}
+form {
+    width: 100%;
+}
+form *{
+    display: inline-block;
+    vertical-align: top;
+}
+.labels {
+    width: 25%;
+}
+
+.inputs {
+    width: 40%;
+}
+
+input:nth-of-type(2),input:nth-of-type(3),input:nth-of-type(4),input:nth-of-type(5){
+    width:20%;
+}
+
+input:nth-of-type(6){
+    width: 20%;
+    margin-left: 25.5%;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Your Very Own Weather Forecast App!</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('form').submit(function(){
+          var city = $("input[type = text]").val();
+          var url = "http://api.openweathermap.org/data/2.5/weather?q="
+          + city + "&APPID=141dacc45563a260cf0de746fb5c53aa";
+          $.get(url, function(data){
+            //get the name
+            var name = "<h2>" + data.name +"</h2>" ;
+            $('div').html(name);
+            //get the temperature
+            var temp_fahr = 1.8 * (data.main.temp - 273) +32;
+            var temperature= "<h4>Temperature: " + Math.round(temp_fahr) + "</h4>";
+            $('div').append(temperature);
+            console.log(data);
+          }, "json");
+          $('input[type=text]').val(" ");
+          return false;
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Your Very Own Weather Forecast App</h1>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="" value="">
+      <input type="submit" name="" value="Search Weather">
+    </form>
+    <div ="info">
+
+    </div>
+  </body>
+</html>

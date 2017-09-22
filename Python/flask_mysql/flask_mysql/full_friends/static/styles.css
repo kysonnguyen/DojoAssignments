@@ -1,0 +1,45 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+#wrapper{
+  width: 100%;
+  text-align: center;
+}
+h1{
+  margin: 20px;
+}
+table{
+  border-collapse: collapse;
+  border: 2px black solid;
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+table, th, td {
+  border-right: 1px black solid;;
+}
+  table th{
+    background-color: #cccccc;
+  }
+  table tr:nth-child(even){
+    background-color: #eee;
+  }
+  table form{
+    display: inline-block;
+  }
+
+form{
+}
+form label{
+  margin: 5px 0px;
+  text-align: right;
+  display: block;
+  width: 50%;
+}
+form label:last-of-type{
+  display: inline-block;
+  margin-left: -35%;
+}

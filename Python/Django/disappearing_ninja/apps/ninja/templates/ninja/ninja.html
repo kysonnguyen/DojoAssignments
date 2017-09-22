@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    <h1>Disappearing Ninjas!!!</h1>
+    <nav>
+      <ul>
+        <li><a class="button" href="/ninja">All Ninjas</a></li>
+        <li><a class="button" href="/ninja/blue">Blue</a></li>
+        <li><a class="button" href="/ninja/orange">Orange</a></li>
+        <li><a class="button" href="/ninja/red">Red</a></li>
+        <li><a class="button" href="/ninja/purple">Purple</a></li>
+      </ul>
+    </nav>
+    <div id="ninjas">
+        {% if ninjas %}
+          {% for ninja in ninjas %}
+            <img src="{% static ninja.1 %}" width="300px">
+            <h4>{{ninja.0}}</h3>
+          {% endfor %}
+        {% endif %}
+    </div>
+  </body>
+</html>

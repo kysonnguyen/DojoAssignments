@@ -1,0 +1,26 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.wrapper{
+  width: 100%;
+}
+main{
+  border: 2px black solid;
+  margin: 20px 50px;
+  width: 30%;
+  padding: 20px;
+}
+form{
+  width: 80%;
+  text-align: left;
+}
+form input, select{
+  width: 30%;
+  text-align: center;
+}
+form textarea{
+  width:100%;
+}

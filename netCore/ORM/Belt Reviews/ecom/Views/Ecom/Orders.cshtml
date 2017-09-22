@@ -1,0 +1,25 @@
+@model ecom.Models.Order
+
+<h4>Add a new order</h4>
+<form asp-action="AddOrder" asp-controller="ecom" method="post">
+    <label asp-for="customer.id">Customer</label>
+    <select asp-for="customer_id" id=""></select>
+    @{
+        foreach(var customer in ViewBag.Customers){
+            <option value="@customer.id">@customer.name</option>
+        }
+    }
+    <label asp-for="quantity">Order</label>
+    <p>
+        <input asp-for="quantity" type="number" min = 1>
+        <select asp-for="products_id" id="">
+        @{
+            foreach(var products in ViewBag.Products){
+                if(products.quantity != 0)
+                <option value="@product.id">@product.name (@product.quantity left!)</option>
+            }
+        }
+        </select>
+    </p>
+    <input type="submit" value="">
+</form>

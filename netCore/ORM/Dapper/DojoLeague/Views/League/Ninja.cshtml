@@ -1,0 +1,11 @@
+<h3>@ViewBag.Ninja.name</h3>
+<p>Ninja Level: @ViewBag.Ninja.level</p>
+<p>Description: @ViewBag.Ninja.description</p>
+@{
+    if(@ViewBag.Ninja.dojo != null){
+        <p>Current Dojo: <a href="/Dojo/@ViewBag.Ninja.dojo.id">@ViewBag.Ninja.dojo.name</a></p>
+    }
+    else{
+        <p>Currently a Rogue Ninja!</p>
+    }
+}

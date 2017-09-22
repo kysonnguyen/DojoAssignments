@@ -1,0 +1,27 @@
+/*Write all of your CSS here*/
+header *{
+    display: inline-block;
+}
+header div{
+    text-align: right;
+    width: 20%;
+    margin-left: 40%;
+}
+header div a{
+    padding-left: 3%;
+}
+
+.messages {
+    border-top: 2px black solid;
+}
+
+.messages form {
+    margin-left: 5%;
+}
+
+h5, h6{
+    font-weight: bold;
+}
+.comments {
+    margin-left: 5%;
+}

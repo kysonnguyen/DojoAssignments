@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First View Page</h1>
+    <ul>
+        @{
+            foreach(var item in ViewBag.toDo){
+                <li>@item</li>
+            }
+        }
+    </ul>
+
+    <p><a href="/GetRandom"><button>Get a Random Number</button></a></p>
+    <form action="/RandomRange" method="POST">
+        <p>Do you want to set a max range? (Default 10)
+            <input type="number" name="range">
+        </p>
+        <input type="submit" value="Get number in range!">
+    </form>
+    @{
+        if(ViewBag.RandNum is int) {
+            <h3>Random Generated Number</h3>
+            <p>@ViewBag.RandNum</p>
+        }
+    }
+    <br>
+    <br>
+    <a href="/json">Show Dylan's Contact Info</a>
+</body>
+</html>

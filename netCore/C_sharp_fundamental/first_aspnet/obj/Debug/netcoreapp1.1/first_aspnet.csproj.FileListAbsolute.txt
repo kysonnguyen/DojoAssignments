@@ -1,0 +1,8 @@
+C:\Users\kyson\Desktop\DojoAssignments\netCore\first_aspnet\bin\Debug\netcoreapp1.1\first_aspnet.deps.json
+C:\Users\kyson\Desktop\DojoAssignments\netCore\first_aspnet\bin\Debug\netcoreapp1.1\first_aspnet.runtimeconfig.json
+C:\Users\kyson\Desktop\DojoAssignments\netCore\first_aspnet\bin\Debug\netcoreapp1.1\first_aspnet.runtimeconfig.dev.json
+C:\Users\kyson\Desktop\DojoAssignments\netCore\first_aspnet\bin\Debug\netcoreapp1.1\first_aspnet.dll
+C:\Users\kyson\Desktop\DojoAssignments\netCore\first_aspnet\bin\Debug\netcoreapp1.1\first_aspnet.pdb
+C:\Users\kyson\Desktop\DojoAssignments\netCore\first_aspnet\obj\Debug\netcoreapp1.1\first_aspnet.AssemblyInfo.cs
+C:\Users\kyson\Desktop\DojoAssignments\netCore\first_aspnet\obj\Debug\netcoreapp1.1\first_aspnet.dll
+C:\Users\kyson\Desktop\DojoAssignments\netCore\first_aspnet\obj\Debug\netcoreapp1.1\first_aspnet.pdb

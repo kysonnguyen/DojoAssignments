@@ -1,0 +1,56 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+}
+#wrapper{
+ width: 100%;
+ background-color: white;
+}
+
+h2 {
+margin: 20px;
+}
+
+form {
+ height: auto;
+ width: 300px;
+ padding: 25px;
+ border: 3px solid black;
+ margin: 20px;
+ text-align: justify;
+}
+ form *{
+   margin-bottom: 10px;
+ }
+ form label{
+   font-size: 15px;
+   width:45%;
+   display: inline-block;
+ }
+ form input{
+   width: 50%;
+   vertical-align: top;
+ }
+ form input:last-child{
+   width: 30%;
+   margin-left: 70%;
+ }
+
+.error {
+ width: 335px;
+ background-color: red;
+ margin-left: 20px;
+ padding: 10px;
+}
+
+.success {
+ width: 335px;
+ background-color: green;
+ margin-left: 20px;
+ padding: 10px;
+}
+
+ul {
+ list-style-type: none;
+}

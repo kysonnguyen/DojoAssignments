@@ -1,0 +1,31 @@
+@model ecom.Models.Product
+<div>
+    <h4>Add a new Product</h4>
+    <form asp-action="AddProduct" asp-controller="ecom" method="post">
+        <span asp-validation-for="name"></span>
+        <label asp-for="name">Name:</label>
+        <input asp-for="name">
+        <span asp-validation-for="imgUrl"></span>
+        <label asp-for="imageUrl">Image (url):</label>
+        <input asp-for="imageUrl">
+        <span asp-validation-for="description"></span>
+        <label asp-for="description">Description:</label>
+        <textarea asp-for="description" id="" cols="30" rows="10"></textarea>
+        <span asp-validation-for="quantity"></span>
+        <label asp-for="quantity">Initial Quantity:</label>
+        <input asp-for="quantity">
+        <input type="submit" value="Create">
+    </form>
+</div>
+
+<main>
+    @{
+        foreach (var product in @ViewBag.Products){
+            <div class="products">
+                <img src="@product.imgUrl" alt="product image">
+                <p>@product.name</p>
+                <p>(@product.quantity left)</p>
+            </div>
+        }
+    }
+</main>

@@ -1,0 +1,37 @@
+@model ecom.Models.Customer
+<div>
+    <h4>Add a new customer</h4>
+    @{
+        if(ViewBag.Error != null){
+            <p><span color:"red">@ViewBag.Error</span></p>
+        }
+    }
+    <form asp-action="AddCustomer" asp-controller="ecom" method="post">
+        <label asp-for="name">Name:</label>
+        <input asp-for="name">
+        <input type="submit" value="Add">
+    </form>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{  
+            if(@ViewBag.Customers != null){
+                foreach (var customer in @ViewBag.Customers){
+                    <tr>
+                        <td>@customer.name</td>
+                        <td>@customer.created_at</td>
+                        <td><button><a href="/Remove/@customer.id">Remove</a></button></td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>

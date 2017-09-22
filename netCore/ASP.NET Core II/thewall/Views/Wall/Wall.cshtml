@@ -1,0 +1,76 @@
+@using thewall.Models
+@model thewall.Models.Message
+
+<header>
+    <h3>CodingDojo Wall</h3>
+    <div>
+        <p>Welcome @ViewBag.User.FirstName</p>
+        <a href="/logout">log off</a>
+    </div>
+</header>
+<form asp-action="PostMessage" asp-controller="Wall" method="POST">
+    <h4>Post a message</h4>
+    <textarea asp-for="message" id="" cols="100" rows="20"></textarea></br>
+    <input type="submit" value="Post a message">
+</form>
+
+@{
+    foreach(var message in @ViewBag.Messages){
+        <div class = "messages">
+            <h5>@message.user.FirstName @message.user.LastName - @message.created_at</h5>
+            <p>@message.message</p>
+            @{
+                if(@message.comments != null){
+                    foreach(var comment in @message.comments){
+                        <div class="comments">
+                            <h6>@comment.user.FirstName @comment.user.LastName - @comment.created_at </h6>
+                            <p>@comment.comment</p>
+                        </div>
+                    }
+                }
+            }
+            <form asp-action="PostComment" asp-controller="Wall" method="POST">
+                <h5>post a comment</h5>
+                <input type="hidden" name="message_id" value="@message.id">
+                <textarea name="comment" id="" cols="95" rows="10"></textarea><br>
+                <input type="submit" value="Post a comment">
+            </form>
+        </div>
+    }
+}
+
+
+
+        @{
+            if(@ViewBag.Ninjas != null)
+            {
+                foreach(var ninja in ViewBag.Ninjas){
+                    <tr>
+                        <td><a href="/Ninja/@ninja.id">@ninja.name</a></td>
+                        <td><a href="/Dojo/@ninja.dojo.id">@ninja.dojo.name</a></td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+</main>
+
+<div>
+    <h2>Register a Ninja</h2>
+    <form aps-action="RegisterNinja">
+        <label for="">Ninja Name:</label>
+        <input asp-for="name" type="text">
+        <label for="">Ninjaing Level (1-10):</label>
+        <select asp-for="level" name="" id="">
+            @{
+                for(int i=1; i<11, i++){
+                    <option value="i">i</option>
+                }
+            }
+        </select>
+        <label for="">Assigned Dojo:</label>
+        <input asp-for="dojo_id" type="text">
+        <label for="">Optional Description:</label>
+        <textarea asp-for="description" name="" id="" cols="30" rows="10"></textarea>
+    </form>
+</div>

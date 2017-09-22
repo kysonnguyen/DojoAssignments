@@ -1,0 +1,10 @@
+<h3>Here are the awesome quotes! <button><a href="/">Back</a></button></h3>
+@{
+    foreach(var quote in @ViewBag.Quotes)
+    {
+        <div id ="quotes">
+            <p id="quote">"@quote["quote"]"</p>
+            <p id="details">-@quote["name"] at @quote["created_at"].ToString("h:mm tt MMMM dd, yyyy")</p>
+        </div>
+    }   
+}

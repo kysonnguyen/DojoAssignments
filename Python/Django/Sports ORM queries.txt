@@ -1,0 +1,17 @@
+Edit the Context:
+1. League.objects.filter(sport = 'Baseball')
+2. League.objects.filter(name__contains = 'Women')
+3.  League.objects.filter(name__contains="Hockey")
+4. League.objects.exclude(sport = 'Football')
+5. League.objects.filter(name__contains = 'Conference')
+6. League.objects.filter(name__contains = 'Atlantic')
+7. Team.objects.filter(location = 'Dallas')
+8. Team.objects.filter(team_name__contains = 'Raptors')
+9. Team.objects.filter(location__contains = 'City')
+10. Team.objects.filter(team_name__startwith = 'T')
+11. Team.objects.all().order_by('location')
+12. Team.objects.all().order_by('-location') #this is because team names start with location
+13. Player.objects.filter(last_name='Cooper')
+14. Player.objects.filter(first_name='Joshua')
+15. Player.objects.filter(last_name='Cooper').exclude(first_name='Joshua')
+16. Player.objects.filter(first_name='Alexander') | Player.objects.filter(first_name='Wyatt')

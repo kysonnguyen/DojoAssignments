@@ -1,0 +1,7 @@
+pip install Django - install Django package
+pip list - list installed packages including editables
+pip install Django - install Django, in this case already installed thus show "Requirement already satisfied + (path to the installed package)"
+pip freeze - Output installed packages in requirements format - the package and version in  a specific format
+pip uninstall Django - uninstall a package - Django
+pip show Django - show information about a package - Django in this case
+pip search Flask - Search for PyPI package with the given name 

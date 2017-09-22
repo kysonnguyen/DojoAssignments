@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+    background-color: lightblue;
+}
+
+header {
+    width:50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-bottom: 2.5%;
+    padding-top: 2.5%;
+}
+
+header *{
+    display: inline-block;
+}
+main {
+    width: 50%;
+    margin-left: 25%; 
+    border: 2px solid black;
+    text-align: center;
+    margin-bottom: 2.5%;
+    padding-top: 2.5%;
+}
+main *{
+    padding: 10%;
+}
+main img{
+    width: 40%;
+    text-align: center;
+    border: 1px solid black;
+}
+section {
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+}
+section form {
+    width: 20%;
+    display: inline-block;
+}
+section form button{
+    width: 100%;
+    text-align: center;
+}

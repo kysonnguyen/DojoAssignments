@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="Pokedex.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        for (var i = 1; i < 152; i++) {
+          var imgurl = "http://pokeapi.co/media/img/"+ i +".png";
+          $("section").append("<img src=" + imgurl + " id = "+i+">");
+        };
+
+        $("img").click(function(){
+          var pokeid = $(this).attr('id');
+          var pokeimg = "http://pokeapi.co/media/img/"+ pokeid +".png"
+          var pokedata = "http://pokeapi.co/api/v1/pokemon/"+pokeid;
+          $.get(pokedata, function(data) {
+              //for name
+                var name = "<h1>" + data.name + "</h1>";
+                $("aside").html(name);
+              //for image
+                $("aside").append("<img src=" + pokeimg +">");
+              //for types
+                var types = "<h4>Types</h4><ul>";
+                    for(var i = 0; i<data.types.length; i++){
+                      types += "<li>" + data.types[i].name + "</li>";
+                    };
+                    types += "</ul>";
+                $("aside").append(types);
+              //for height
+                var height = "<h4>Height</h4><p>" + data.height + "</p>";
+                $("aside").append(height);
+              //for weight
+                var weight = "<h4>Height</h4><p>" + data.weight + "</p>";
+                $("aside").append(weight);
+                }, "json");
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <section id="pokemon">
+      </section>
+      <aside id="pokedex">
+      </aside>
+  </div>
+  </body>
+</html>

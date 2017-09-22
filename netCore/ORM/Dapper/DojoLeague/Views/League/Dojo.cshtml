@@ -1,0 +1,47 @@
+<h3>@ViewBag.Dojo.name!!</h3>
+<p>Location: @ViewBag.Dojo.location</p>
+<p>Description: @ViewBag.Dojo.additional_information</p>
+
+<div>
+    <h3>Current Members</h3>
+    <table>
+        <thead>
+            <th>Ninja</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            @{
+                if(@ViewBag.Dojo.ninjas != null){
+                    foreach(var ninja in ViewBag.Dojo.ninjas){
+                        <tr>
+                            <td>@ninja.name</td>
+                            <td><a href="/Banish/@ninja.id">Banish</a></td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <h3>Rogue Ninjas</h3>
+    <table>
+        <thead>
+            <th>Ninja</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            @{
+                if(@ViewBag.Rogues != null){
+                    foreach(var rogue in ViewBag.Rogues){
+                        <tr>
+                            <td>@rogue.name</td>
+                            <td><a href="/Recruit/@rogue.id">Recruit</a></td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>

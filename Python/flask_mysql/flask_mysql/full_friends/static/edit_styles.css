@@ -1,0 +1,16 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+form{
+}
+form label{
+  margin: 5px 0px;
+  text-align: right;
+  display: block;
+  width: 50%;
+}
+form label:last-of-type{
+  display: inline-block;
+}

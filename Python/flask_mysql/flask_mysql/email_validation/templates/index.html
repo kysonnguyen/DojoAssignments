@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>flaskMySQL email validation</title>
+</head>
+<body>
+  <h1>Enter a Valid(Any) Email!</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <form action='/process' method='POST'>
+    Email:<input type="text" name="email">
+    <input type="submit" value="Submit">
+  </form>
+
+  <h2>Email Addresses Entered</h2>
+  <!-- with all the data we can then construct a more structured output -->
+  {% for email in all_emails: %}
+     <p>{{ email['email'] }}  {{ email['created_at'] }}</p>
+     <hr>
+  {% endfor %}
+</body>
+</html>

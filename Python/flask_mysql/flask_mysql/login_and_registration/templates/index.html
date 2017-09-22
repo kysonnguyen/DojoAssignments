@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylesheet.css')}}">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h2>Returing</h2>
+      <form class="" action="/login" method="post">
+        <label for="">Email:</label>
+        <input type="text" name="email" value="">
+        <label for="">Password:</label>
+        <input type="password" name="password" value="">
+        <input type="submit" name="" value="Log in">
+      </form>
+      <h2>New? Register</h2>
+      <form class="" action="/create" method="post">
+        <label for="">First Name:</label>
+        <input type="text" name="first_name" value="">
+        <label for="">Last Name:</label>
+        <input type="text" name="last_name" value="">
+        <label for="">Email:</label>
+        <input type="text" name="email" value="">
+        <label for="">Password (at least 8 characters):</label>
+        <input type="password" name="password" value="">
+        <label for="">Confirm Password:</label>
+        <input type="password" name="confirm" value="">
+        <input type="submit" name="" value="Register">
+      </form>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+  </body>
+</html>

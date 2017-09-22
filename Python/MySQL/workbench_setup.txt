@@ -1,0 +1,8 @@
+USE twitter;
+
+SELECT *
+FROM users;
+
+INSERT INTO users VALUES ('6', 'Kyson', 'Nguyen', 'ksbn', '1991-11-04', NOW(), NOW());
+DELETE FROM users where id = 6;
+UPDATE users SET handle = 'REAL T MAC' WHERE id = 4; 

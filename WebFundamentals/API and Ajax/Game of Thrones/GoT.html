@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Thrones</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("body").css('width', '970px')
+        $('img').css("width", "160px")
+        $('img').css("height", "100px")
+        $('img').click(function(){
+          //get and fill in info
+          var house = $(this).attr('alt');
+          var url = "http://anapioficeandfire.com/api/houses?name="+house;
+          $.get(url,function(data){
+            var name = data[0].name;
+            var words = data[0].words;
+            var title = "";
+            var titles = "";
+              for (var i = 0; i < data[0].titles.length-1; i++) {
+              titles += data[0].titles[i] + "; ";
+              }
+              titles += data[0].titles[data[0].titles.length-1];
+            $("section").html("<h3>House Details</h3>")
+            $("section").append("<p> Name: " +name+"</p>")
+            $("section").append("<p> Words: "+words+"</p>")
+            $("section").append("<p> Titles: "+titles+"</p>")
+          }, "json");
+        })
+        $(document).on("click", function(){
+          //section styling
+          $('section').show();
+          $('section').css("width", "600px")
+          $('section').css("border", "5px solid black")
+          $('section').css("padding-left", "20px")
+
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div id="houses">
+      <img src="stark.jpg" alt="House Stark of Winterfell">
+      <img src="targaryen.jpg" alt="House Targaryen of King's Landing">
+      <img src="lannister.jpg" alt="House Lannister of Casterly Rock">
+      <img src="baratheon.png" alt="House Baratheon of Storm's End">
+      <h2>Click on picture to see house details</h2>
+    </div>
+    <section>
+    </section>
+  </body>
+</html>

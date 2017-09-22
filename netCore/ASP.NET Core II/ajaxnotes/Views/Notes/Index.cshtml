@@ -1,0 +1,21 @@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<header>
+    <h1>Ajax Notes~</h1>
+    <form id="create" action="/add" method="post">
+        <input type="text" name="title" placeholder="Insert note title here...">
+        <input type="submit" value="Add Note">
+    </form>
+</header>
+@{
+    if(@ViewBag.Error != null){
+        <p id="error">@ViewBag.Error</p>
+    }
+}
+
+<main>
+    
+</main>
+

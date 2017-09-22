@@ -1,0 +1,40 @@
+@model DojoLeague.Models.Dojo
+
+
+<div>
+    <h2>Registered Dojos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Dojo Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if(@ViewBag.Dojos != null)
+                {
+                    foreach(var Dojo in ViewBag.Dojos){
+                        <tr>
+                            <td><a href="/Dojo/@Dojo.id">@Dojo.name</a></td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<p>@ViewBag.Errors</p>
+
+<div>
+    <h2>Register a Dojo</h2>
+    <form action="/RegisterDojo" method="POST">
+        <label name="name">Dojo Name:</label>
+        <input name="name" type="text">
+        <label name="location">Dojo Location:</label>
+        <input name="location" type="text">
+        <label name="additional_information">Additional Dojo Information:</label>
+        <textarea name="additional_information" name="" id="" cols="50" rows="10"></textarea>
+        <input type="submit" value="Register Dojo">
+    </form>
+</div>
